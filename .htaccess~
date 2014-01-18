@@ -1,0 +1,17 @@
+#<IfDefine !webscript>
+#RedirectPermanent http://webscript.princeton.edu/~pbdc http://www.princeton.edu/~pbdc
+#</IfDefine>	
+
+#<IfDefine webscript>
+#RedirectPermanent /~pbdc http://www.princeton.edu/~pbdc
+#</IfDefine>
+
+#Options +FollowSymLinks
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^www\.princeton\.edu$
+RewriteRule (.*) http://www.princeton.edu/$1 [R=301,L]
+</IfModule>
+
+Redirect 302 /~pbdc/registration.html http://www.dance.zsconcepts.com/competition/registration-main.cgi?comp_id=145
+

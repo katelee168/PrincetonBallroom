@@ -1,0 +1,6 @@
+#<IfDefine !webscript>
+#RedirectPermanent /~pbdc http://webscript.princeton.edu/~pbdc
+#</IfDefine>
+
+Redirect 302 /~pbdc/registration.html http://www.dance.zsconcepts.com/competition/registration-main.cgi?comp_id=145
+
